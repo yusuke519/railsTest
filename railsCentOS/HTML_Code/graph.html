@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Disabled Support Activities</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="signin.css" rel="stylesheet" >
+
+		<script src="Chart.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="../../assets/js/html5shiv.js"></script>
+		<script src="../../assets/js/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="shortcut icon" href="favicon.ico">
+	</head>
+	<body>
+
+		<!-- Navbar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">DSA</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a 
+					type="text"
+					data-toggle="modal"
+					href="#dataSelectModal"
+					> 
+					<span class="glyphicon glyphicon-folder-open"></span>
+					Data
+				</a></li>
+				<li><a href=""> 
+					<span class="glyphicon glyphicon-filter"></span>
+					Filter
+				</a></li>
+				<li><a href=""> 
+					<span class="glyphicon glyphicon-signal"></span>
+					Graphs
+				</a></li>
+				<li><a href="domtest.html"> 
+					<span class="glyphicon glyphicon-tag"></span>
+					Dom操作
+				</a></li>
+			</ul>
+			<form class="navbar-form navbar-right">
+				<a type="input" data-toggle="modal" 
+					href="#myModal" 
+					class="btn btn-info"> Log In</a>
+				<a type="input" data-toggle="modal"
+					href="#addNewModal"
+					class="btn btn-info"> Add New</a>
+			</form>
+		</div>
+		</nav>
+		
+	
+		<!-- Modal -->
+		<div class="modal fade" id="dataSelectModal" tabindex="-1" role="dialog" aria-labelleadby="addNewLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						</button>
+						<h3 class="modal-title">Select Data</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="col-lg-2 control-label" for="colorFile"> Color File</label>
+								<div class="col-lg-10">
+									<input type="file" id="colorFile">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-2 control-label" for="latlngFile"> LatLng File</label>
+								<div class="col-lg-10">
+									<input type="file" id="latlngFile">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Register!</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelleadby="addNewLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						</button>
+						<h3 class="modal-title">Please input your user name and password</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="col-lg-2 control-label" for="userNameInput"> User Name</label>
+								<div class="col-lg-10">
+									<input type="email" class="form-control" id="userNameInput" placeholder="Enter email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-2 control-label" for="passwordInput"> Password</label>
+								<div class="col-lg-10">
+									<input type="password" class="form-control" id="passwordInput" placeholder="Password">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Sign In!</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="addNewModal" tabindex="-1" role="dialog" 
+			aria-labelleadby="addNewLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<form class="form-signin">
+							<h2 class="form-sigin-heading">Please register your information</h2>
+							<input type="text" class="form-control" placeholder="Email address" autofocus>
+							<input type="password" class="form-control" placeholder="Password">
+							<label class="checkbox">
+								<input type="checkbox" value="remember-me"> Remember me
+							</label>
+							<div class="row">
+								<div class="col-sm-6">
+									<button class="btn btn-lg btn-default btn-block" type="submit">Cancel</button>
+								</div>
+								<div class="col-sm-6">
+									<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="jumbotron">
+			<div class="container">
+				<h1> Welcom to Organaization of Disabled Support Activities</h1>
+				<p> This page provides user action based communication. We mainly provide ...
+				<ul>
+					<li>one</li>
+					<li>two</li>
+				</ul>
+				</p>
+				<p><a class="btn btn-lg btn-warning" href="#">Learn More!!</a></p>
+			</div>
+		</div>
+		<div class="container">
+			<h1> Chart.js Test Page</h1><br>
+			<a href="http://www.chartjs.org/docs/">
+				Chart.js
+			</a>
+
+			<div>
+				<canvas id="myChart" width="400" height="400"></canvas>
+			</div>
+			<canvas id="pieArea" height="500" width="500"></canvas>
+			<script>
+				<!-- 円グラフ用データ -->
+				var pieData = [
+				{
+					value: 70,
+					color:"#CCCCCC"
+				},
+				{
+					value : 15,
+					color : "#FF0066"
+				},
+				{
+					value : 15,
+					color : "#666666"
+				}
+				];
+				<!-- 円グラフ描画 -->
+				var myPie = new Chart(document.getElementById("pieArea").getContext("2d")).Pie(pieData);
+			</script>
+		</div>
+
+
+			<!-- Fotter -->
+			<div class="container">
+				<footer>
+				<p class="pull-right"><a href="index.html">Back to top</a></p>
+				<p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			</footer>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+
+
+		<script type="text/javascript">
+			<!--
+			var data = {
+				labels : ["January","February","March","April","May","June","July"],
+				datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					data : [65,59,90,81,56,55,40]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					data : [28,48,40,19,96,27,100]
+				}
+				]
+			}var ctx = document.getElementById("myChart").getContext("2d");
+			var myNewChart = new Chart(ctx).PolarArea(data);
+
+			// -->
+		</body>
+	</html>
+
