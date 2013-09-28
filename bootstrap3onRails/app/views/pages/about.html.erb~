@@ -1,0 +1,13 @@
+<div class="jumbotron">
+	<div class="container">
+		<h1> Welcom to Organaization of Disabled Support Activities</h1>
+		<p> This page provides user action based communication. We mainly provide ...
+		<ul>
+			<li>one</li>
+			<li>two</li>
+		</ul>
+		</p>
+		適当に後で変える
+		<p><a class="btn btn-lg btn-warning" href="#">Learn More!!</a></p>
+	</div>
+</div>
